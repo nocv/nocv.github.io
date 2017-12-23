@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Nocv Blog</title>
+  <subtitle>a little something</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://nocv.me/"/>
+  <updated>2017-07-24T01:45:46.413Z</updated>
+  <id>http://nocv.me/</id>
+  
+  <author>
+    <name>nocv</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows做端口转发</title>
+    <link href="http://nocv.me/2017/07/Windows-protproxy/"/>
+    <id>http://nocv.me/2017/07/Windows-protproxy/</id>
+    <published>2017-07-24T01:39:20.000Z</published>
+    <updated>2017-07-24T01:45:46.413Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;linux做端口转发相信大家都知道，由于使用了某葵的vpn组网，而多数内网机都是Windows系统，如果我要登录其中一台linux的话还要远程到Windows，还有各种服务等，用起来很不便，于是用Windows端口转发这个想法就出来了。&lt;/p&gt;
+&lt;h2 id=&quot;Step-1
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Write Up For FCTF</title>
+    <link href="http://nocv.me/2017/07/Write-Up-For-FCTF/"/>
+    <id>http://nocv.me/2017/07/Write-Up-For-FCTF/</id>
+    <published>2017-07-10T12:26:00.305Z</published>
+    <updated>2017-07-10T12:26:00.261Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;菜大佬放出的&lt;a href=&quot;http://ctf.lpnal.top&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fctf&lt;/a&gt;，测试了一下，一共4道题，其中3道web和1道reverse。&lt;br&gt;&lt;br&gt;题目也比较简单，多是之前的CTF线上赛的复现
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
