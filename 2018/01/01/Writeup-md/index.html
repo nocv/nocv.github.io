@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://nocv.me">
   <title>网络安全技能大赛官方Writeup | Nocv blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##0X00：写在前面的话 考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  ##0X01：WEB 1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{">
+  <meta name="description" content="0X00：写在前面的话考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  0X01：WEB1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{96B61B">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络安全技能大赛官方Writeup">
 <meta property="og:url" content="http://nocv.me/2018/01/01/Writeup-md/index.html">
 <meta property="og:site_name" content="Nocv blog">
-<meta property="og:description" content="##0X00：写在前面的话 考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  ##0X01：WEB 1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{">
-<meta property="og:updated_time" content="2018-01-01T14:36:56.271Z">
+<meta property="og:description" content="0X00：写在前面的话考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  0X01：WEB1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{96B61B">
+<meta property="og:updated_time" content="2018-01-01T14:40:18.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络安全技能大赛官方Writeup">
-<meta name="twitter:description" content="##0X00：写在前面的话 考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  ##0X01：WEB 1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{">
+<meta name="twitter:description" content="0X00：写在前面的话考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  0X01：WEB1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{96B61B">
   
     <link rel="alternative" href="/atom.xml" title="Nocv blog" type="application/atom+xml">
   
@@ -163,11 +163,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##<strong>0X00：写在前面的话</strong></p>
-<p>考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。</p>
+        <h2 id="0X00：写在前面的话"><a href="#0X00：写在前面的话" class="headerlink" title="0X00：写在前面的话"></a><strong>0X00：写在前面的话</strong></h2><p>考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。</p>
 <hr>
-<p>##<strong>0X01：WEB</strong></p>
-<h3 id="1-Check-in"><a href="#1-Check-in" class="headerlink" title="1. Check_in"></a>1. Check_in</h3><p>这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那</p>
+<h2 id="0X01：WEB"><a href="#0X01：WEB" class="headerlink" title="0X01：WEB"></a><strong>0X01：WEB</strong></h2><h3 id="1-Check-in"><a href="#1-Check-in" class="headerlink" title="1. Check_in"></a>1. Check_in</h3><p>这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那</p>
 <blockquote>
 <p>fctf{96B61B8E069<strong><strong>**</strong></strong>24EA74567BA}</p>
 <h3 id="2-Sourse"><a href="#2-Sourse" class="headerlink" title="2. Sourse"></a>2. Sourse</h3><p>这道题才算有点CTF的套路，真的去点击250下的恐怕不知道啥叫javascript，就算你点击了250下也会有提示对吧，这题一点都不吭<br>fctf{A0DA2914FC3<strong><strong>**</strong></strong>2B4B31F1455}</p>
@@ -195,8 +193,7 @@ union select name from flag;
 <p>fctf{C12D20EC<strong><strong>**</strong></strong>B8D270A99AC50E}</p>
 <h3 id="13-File-get-contents"><a href="#13-File-get-contents" class="headerlink" title="13. File_get_contents"></a>13. File_get_contents</h3><p>这道题，出了点失误。我本来是思路是ssrf，想考察一下对PHP中file_get_contents()函数的用法。结果没成功成了文件读取了。直接读取flag文件就行。<br>fctf{BCC8272A<strong><strong>**</strong></strong>F1B6D1F0AF9A78}</p>
 <h3 id="14-Serial"><a href="#14-Serial" class="headerlink" title="14. Serial"></a>14. Serial</h3><p>恩。。。序列化与反序列化，不过这可不是反序列化漏洞，同样只是看你知不知道序列化与反序列化而已。构造一个同样的类把年龄改一下输出个序列化的值提交就行。<br>fctf{DAB51C5B<strong><strong>**</strong></strong>0A8795412B3624}</p>
-<p>##<strong>0X02：MISC</strong></p>
-<h3 id="1-隐写术"><a href="#1-隐写术" class="headerlink" title="1. 隐写术"></a>1. 隐写术</h3><p>最最最最最简单的隐写术，下载图片。用winhex打开查找关键字得出flag<br>fctf{A025519<strong><strong>**</strong></strong>9C6396E16B861C5}</p>
+<h2 id="0X02：MISC"><a href="#0X02：MISC" class="headerlink" title="0X02：MISC"></a><strong>0X02：MISC</strong></h2><h3 id="1-隐写术"><a href="#1-隐写术" class="headerlink" title="1. 隐写术"></a>1. 隐写术</h3><p>最最最最最简单的隐写术，下载图片。用winhex打开查找关键字得出flag<br>fctf{A025519<strong><strong>**</strong></strong>9C6396E16B861C5}</p>
 <h3 id="2-Hex"><a href="#2-Hex" class="headerlink" title="2. Hex"></a>2. Hex</h3><p>题目给的是一个hex文本，将中间的十六进制数单独复制出来粘贴到winhex中查看文件头可以看出这是一个rar压缩包，将文件另存为压缩包后打开发现里面还有一个不知道什么文件，继续用winhex查看文件头发现是jpg图片，修改拓展名打开即可得到flag<br>fctf{E3BC730<strong><strong>**</strong></strong>14E5A71CCCE069}</p>
 <h3 id="3-Clever"><a href="#3-Clever" class="headerlink" title="3. Clever"></a>3. Clever</h3><p>这题题目描述很清楚，找出1-99999中不含’2’,’6’,’8’的数字的个数。<br>厉害的小伙伴可以用手算，不过为何不用代码来解决呢？<br>Python版：<br></p>
 </blockquote>
@@ -252,14 +249,11 @@ print r.text
 </code></pre><p>flag</p>
 <blockquote>
 <p>fctf{FC1B2E23<strong><strong>**</strong></strong>8725E557B0DC7}</p>
-<p>##<strong>0X03：CRYPTO</strong></p>
-<h3 id="1-BASE64"><a href="#1-BASE64" class="headerlink" title="1. BASE64"></a>1. BASE64</h3><p>这道题，就是BASE64，别想多，只是BASE64加密次数有点多而已。解就是了<br>fctf{0FEA29238DC21D183E329557FFFD53D3}</p>
+<h2 id="0X03：CRYPTO"><a href="#0X03：CRYPTO" class="headerlink" title="0X03：CRYPTO"></a><strong>0X03：CRYPTO</strong></h2><h3 id="1-BASE64"><a href="#1-BASE64" class="headerlink" title="1. BASE64"></a>1. BASE64</h3><p>这道题，就是BASE64，别想多，只是BASE64加密次数有点多而已。解就是了<br>fctf{0FEA29238DC21D183E329557FFFD53D3}</p>
 <h3 id="2-crypto"><a href="#2-crypto" class="headerlink" title="2. crypto"></a>2. crypto</h3><p>这道题，凯撒加栅栏。rot13转一下就能看出flag的特性了，再用栅栏密码解一下就出来了<br>fctf{EF26AEE2<strong><strong>**</strong></strong>C8B1C0F3622BD47}</p>
-<p>##<strong>0X04：FORENSIC</strong></p>
-<h3 id="1-PCAP"><a href="#1-PCAP" class="headerlink" title="1. PCAP"></a>1. PCAP</h3><p>数据包，Wireshark打开看一下就知道，很纯洁的一个数据包。追踪一下tcp流就能看出来这是一次telnet连接。操作痕迹都能看到，首先打开了telnet，然后dir列了一下目录，然后切换到了C盘又dir了一下，最后tpye查看了flag<br>fctf{B60E36C7<strong><strong>**</strong></strong>A6BBE8830600A1}</p>
+<h2 id="0X04：FORENSIC"><a href="#0X04：FORENSIC" class="headerlink" title="0X04：FORENSIC"></a><strong>0X04：FORENSIC</strong></h2><h3 id="1-PCAP"><a href="#1-PCAP" class="headerlink" title="1. PCAP"></a>1. PCAP</h3><p>数据包，Wireshark打开看一下就知道，很纯洁的一个数据包。追踪一下tcp流就能看出来这是一次telnet连接。操作痕迹都能看到，首先打开了telnet，然后dir列了一下目录，然后切换到了C盘又dir了一下，最后tpye查看了flag<br>fctf{B60E36C7<strong><strong>**</strong></strong>A6BBE8830600A1}</p>
 </blockquote>
-<p>##<strong>0X05：PWN</strong></p>
-<h3 id="1-I-O"><a href="#1-I-O" class="headerlink" title="1. I/O"></a>1. I/O</h3><p>本来不打算出pwn题献丑的，就出了个不算pwn的pwn题。这题是从pwnable上抄来的，很经典。<br></p>
+<h2 id="0X05：PWN"><a href="#0X05：PWN" class="headerlink" title="0X05：PWN"></a><strong>0X05：PWN</strong></h2><h3 id="1-I-O"><a href="#1-I-O" class="headerlink" title="1. I/O"></a>1. I/O</h3><p>本来不打算出pwn题献丑的，就出了个不算pwn的pwn题。这题是从pwnable上抄来的，很经典。<br></p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;string.h&gt;
