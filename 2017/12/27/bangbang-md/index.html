@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://nocv.me">
-  <title>Nocv blog</title>
+  <title>我是如何发现邦邦微信后台漏洞的 | Nocv blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我是如何发现邦邦微信后台漏洞的一、找到微信后台URL前些天第一次用邦邦，发现其后台做的很是粗糙，作为热衷于渗透的安全狗来说肯定要免费来一次渗透测试的。打开微信，用浏览器打开页面找到后台URL:www.bangbangtuandui110.cn 二、初次尝试不得不说，邦邦的微信后台果然是用第三方软件搭建的。也不管什么第三方了。先期找一下有没有挂CDN，虽然猜测没有，但找CDN是对网站的基本尊重。于">
+  <meta name="description" content="一、找到微信后台URL前些天第一次用邦邦，发现其后台做的很是粗糙，作为热衷于渗透的安全狗来说肯定要免费来一次渗透测试的。打开微信，用浏览器打开页面找到后台URL:www.bangbangtuandui110.cn 二、初次尝试不得不说，邦邦的微信后台果然是用第三方软件搭建的。也不管什么第三方了。先期找一下有没有挂CDN，虽然猜测没有，但找CDN是对网站的基本尊重。于是用站长之家测试一番果然没有，接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nocv blog">
+<meta property="og:title" content="我是如何发现邦邦微信后台漏洞的">
 <meta property="og:url" content="http://nocv.me/2017/12/27/bangbang-md/index.html">
 <meta property="og:site_name" content="Nocv blog">
-<meta property="og:description" content="我是如何发现邦邦微信后台漏洞的一、找到微信后台URL前些天第一次用邦邦，发现其后台做的很是粗糙，作为热衷于渗透的安全狗来说肯定要免费来一次渗透测试的。打开微信，用浏览器打开页面找到后台URL:www.bangbangtuandui110.cn 二、初次尝试不得不说，邦邦的微信后台果然是用第三方软件搭建的。也不管什么第三方了。先期找一下有没有挂CDN，虽然猜测没有，但找CDN是对网站的基本尊重。于">
-<meta property="og:updated_time" content="2017-12-27T04:32:32.388Z">
+<meta property="og:description" content="一、找到微信后台URL前些天第一次用邦邦，发现其后台做的很是粗糙，作为热衷于渗透的安全狗来说肯定要免费来一次渗透测试的。打开微信，用浏览器打开页面找到后台URL:www.bangbangtuandui110.cn 二、初次尝试不得不说，邦邦的微信后台果然是用第三方软件搭建的。也不管什么第三方了。先期找一下有没有挂CDN，虽然猜测没有，但找CDN是对网站的基本尊重。于是用站长之家测试一番果然没有，接">
+<meta property="og:updated_time" content="2018-01-01T14:41:48.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nocv blog">
-<meta name="twitter:description" content="我是如何发现邦邦微信后台漏洞的一、找到微信后台URL前些天第一次用邦邦，发现其后台做的很是粗糙，作为热衷于渗透的安全狗来说肯定要免费来一次渗透测试的。打开微信，用浏览器打开页面找到后台URL:www.bangbangtuandui110.cn 二、初次尝试不得不说，邦邦的微信后台果然是用第三方软件搭建的。也不管什么第三方了。先期找一下有没有挂CDN，虽然猜测没有，但找CDN是对网站的基本尊重。于">
+<meta name="twitter:title" content="我是如何发现邦邦微信后台漏洞的">
+<meta name="twitter:description" content="一、找到微信后台URL前些天第一次用邦邦，发现其后台做的很是粗糙，作为热衷于渗透的安全狗来说肯定要免费来一次渗透测试的。打开微信，用浏览器打开页面找到后台URL:www.bangbangtuandui110.cn 二、初次尝试不得不说，邦邦的微信后台果然是用第三方软件搭建的。也不管什么第三方了。先期找一下有没有挂CDN，虽然猜测没有，但找CDN是对网站的基本尊重。于是用站长之家测试一番果然没有，接">
   
     <link rel="alternative" href="/atom.xml" title="Nocv blog" type="application/atom+xml">
   
@@ -146,10 +146,24 @@
             <article id="post-bangbang-md" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      我是如何发现邦邦微信后台漏洞的
+    </h1>
+  
+
+        
+        <a href="/2017/12/27/bangbang-md/" class="archive-article-date">
+  	<time datetime="2017-12-27T14:34:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-27</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="我是如何发现邦邦微信后台漏洞的"><a href="#我是如何发现邦邦微信后台漏洞的" class="headerlink" title="我是如何发现邦邦微信后台漏洞的"></a>我是如何发现邦邦微信后台漏洞的</h2><h4 id="一、找到微信后台URL"><a href="#一、找到微信后台URL" class="headerlink" title="一、找到微信后台URL"></a>一、找到微信后台URL</h4><p>前些天第一次用邦邦，发现其后台做的很是粗糙，作为热衷于渗透的安全狗来说肯定要免费来一次渗透测试的。打开微信，用浏览器打开页面找到后台URL:www.bangbangtuandui110.cn</p>
+        <h4 id="一、找到微信后台URL"><a href="#一、找到微信后台URL" class="headerlink" title="一、找到微信后台URL"></a>一、找到微信后台URL</h4><p>前些天第一次用邦邦，发现其后台做的很是粗糙，作为热衷于渗透的安全狗来说肯定要免费来一次渗透测试的。打开微信，用浏览器打开页面找到后台URL:www.bangbangtuandui110.cn</p>
 <h4 id="二、初次尝试"><a href="#二、初次尝试" class="headerlink" title="二、初次尝试"></a>二、初次尝试</h4><p>不得不说，邦邦的微信后台果然是用第三方软件搭建的。也不管什么第三方了。先期找一下有没有挂CDN，虽然猜测没有，但找CDN是对网站的基本尊重。于是用站长之家测试一番果然没有，接着进行端口扫描.发现开了ftp、http、3306、3389、还有一个888端口不知道干嘛用的。一看便知这是Windows系统。</p>
 <h4 id="三、小试牛刀"><a href="#三、小试牛刀" class="headerlink" title="三、小试牛刀"></a>三、小试牛刀</h4><p>在简单的端口扫描之后，便开始实施渗透了。http是个登录口比较难啃先跳过，3389也没那么简单跳过。3306有ip限制也没办法。最后把目光放在了那个888端口上，由于之前有次渗透测试碰到了宝塔控制面板使用的就是888端口，所以这次也尝试了一下用http访问888端口。果然是宝塔控制面板，然后弱口令直接进入。</p>
 <h4 id="四、Get-Shell"><a href="#四、Get-Shell" class="headerlink" title="四、Get Shell"></a>四、Get Shell</h4><p>进后台之后，发现宝塔控制面板功能还是挺齐全的，直接后台传马便GetShell，发现shell还是system权限，这可以做的事就很多了。也就不一一尝试了。至此，邦邦团队的微信后台的渗透测试到此结束，后面就是联系负责人谈谈帮我拿快递的事(^_^)…</p>
