@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://nocv.me/2018/01/01/Writeup-md/index.html">
 <meta property="og:site_name" content="Nocv blog">
 <meta property="og:description" content="0X00：写在前面的话考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  0X01：WEB1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{96B61">
-<meta property="og:updated_time" content="2018-01-01T15:49:26.947Z">
+<meta property="og:updated_time" content="2018-01-02T02:24:02.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络安全技能大赛官方Writeup">
 <meta name="twitter:description" content="0X00：写在前面的话考虑到参加这次比赛的人员总体水平，所以题出的都比较简单，但是题量相对于9月份的校赛还是比较多的。所以这次的题呢也就以web为主，算是给想入门CTF的新手们一个比较好的开始吧。平台采用的是开源的CTFD平台，赛题主要是手撸代码+虚拟容器技术。  0X01：WEB1. Check_in这题是针对小白的，本来不打算增加这么一道题，实在没办法。恩，答案就在那  fctf{96B61">
@@ -324,7 +324,7 @@ int main(){
     printf(&quot;learn about Linux file IO\n&quot;);
     return 0;    
 }
-</code></pre><p>这题给了源码，可以看出想要满足cat flag的要求就是从输入缓冲区读取一个字符再转换为整形后减去0x1234。并将其复制于变量fd，再从fd中读取32字节复制给变量buf，最后比较buf与字符串’FORESTPOLICE\n’进行比较，相同就可cat flag。<br><br>看出来很难，但如果熟悉linux文件描述符的话就不一样了，在类uniux系统中，0代表标准输入，1表示标准输出，2代表标准错误。我们看如果我们输入0x1234，这样fd的值就为0。这题使用了read()函数，该函数就会从‘0’中读取字符串，而‘0’又是linux中的标准输入流。所以该程序会继续让你输入，此时再输入‘FORESTPOLICE’并回车。这都被read()函数读到缓冲区中。这个时候buf就能通过strcmp()函数了。</p>
+</code></pre><p>这题给了源码，可以看出想要满足cat flag的要求就是从输入缓冲区读取一个字符再转换为整形后减去0x1234。并将其复制于变量fd，再从fd中读取32字节复制给变量buf，最后比较buf与字符串’FORESTPOLICE\n’进行比较，相同就可cat flag。<br><br>看出来很难，但如果熟悉linux文件描述符的话就不一样了，在类uniux系统中，0代表标准输入，1表示标准输出，2代表标准错误。我们看如果我们输入4660也就是0x1234的十进制值，这样fd的值就为0。这题使用了read()函数，该函数就会从‘0’中读取字符串，而‘0’又是linux中的标准输入流。所以该程序会继续让你输入，此时再输入‘FORESTPOLICE’并回车。这都被read()函数读到缓冲区中。这个时候buf就能通过strcmp()函数了。</p>
 <blockquote>
 <p>fctf{9F827BC0<strong><strong>**</strong></strong>BA97DB8F3983EB5}</p>
 </blockquote>
