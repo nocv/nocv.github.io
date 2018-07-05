@@ -434,6 +434,130 @@ int main(){
 
 
   
+    <article id="post-Windows-protproxy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/24/Windows-protproxy/">Windows做端口转发</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/24/Windows-protproxy/" class="archive-article-date">
+  	<time datetime="2017-07-24T01:39:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>linux做端口转发相信大家都知道，由于使用了某葵的vpn组网，而多数内网机都是Windows系统，如果我要登录其中一台linux的话还要远程到Windows，还有各种服务等，用起来很不便，于是用Windows端口转发这个想法就出来了。</p>
+<h2 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1:"></a>Step 1:</h2><p>Windows是有端口转发功能的，有些可能不知道，在命令行下一条命令就能完成端口转发</p>
+<blockquote>
+<p>netsh interface portproxy add v4tov4 listenaddress=”loadip” listenport=”loadport” connectaddress=”connectip” connectport=”connectport”</p>
+</blockquote>
+<p>这个就是Windows下添加一条端口转发的的命令，其中”loadip”和”loadport”代表本地ip地址和端口<br>“connectip”和”connectport”表示转发目标主机的ip地址和端口<br><br>同样的，删除某一端口转发规则则用下面的命令：</p>
+<blockquote>
+<p>netsh interface portproxy delete v4tov4 listenaddress=”loadip” listenport=”loadport”</p>
+</blockquote>
+<p>显示当前的所以转发规则:</p>
+<blockquote>
+<p>netsh interface portproxy show v4tov4</p>
+</blockquote>
+<h2 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2:"></a>Step 2:</h2><p>前面就是Windows自带的端口转发命令，但是看起来很长用起来很不方便。于是乎，一个Python脚本便诞生了:</p>
+<pre><code>import sys
+import os
+
+def addport(load_ip,load_port,connect_ip,connect_port):
+    addport = &quot;netsh interface portproxy add v4tov4 listenaddress=&quot;
+    addport += load_ip
+    addport += &quot; listenport=&quot;
+    addport += load_port
+    addport += &quot; connectaddress=&quot;
+    addport += connect_ip
+    addport += &quot; connectport=&quot;
+    addport += connect_port
+    os.system(addport)
+
+def showport():
+    showport = &quot;netsh interface portproxy show v4tov4&quot;
+    os.system(showport)
+
+def delport(load_ip,load_port):
+    delport = &quot;netsh interface portproxy delete v4tov4 listenaddress=&quot;
+    delport += load_ip
+    delport += &quot; listenport=&quot;
+    delport += load_port
+    os.system(delport)
+
+if __name__ == &apos;__main__&apos;:
+    if len(sys.argv) == 1:
+        print(&quot;\n Set prot proxy for windows \n&quot;)
+        print(&quot; Usage: python %s &lt;cmd&gt; [options] Or -h for help \n&quot; % sys.argv[0])
+    if len(sys.argv) == 2:
+        if sys.argv[1] == &apos;-h&apos;:
+            print(&quot;\n -a: add a portproxy \n eg: python file.py -a 192.168.0.1 2333 172.17.24.3 80 \n &quot;)
+            print(&quot; -s: show portproxy for now \n eg: python file.py -s \n&quot;)
+            print(&quot; -d: delete a portproxy \n eg: python file.py -d 192.168.0.1 2333 \n &quot;)
+        elif sys.argv[1] == &apos;-s&apos;:
+            showport()
+        else:
+            print(&quot;\n Set prot proxy for windows \n&quot;)
+            print(&quot;\n Usage: python %s &lt;cmd&gt; [options] Or -h for help \n&quot; % sys.argv[0])
+    if len(sys.argv) &gt; 2:
+        if sys.argv[1] == &apos;-a&apos;:
+            addport(sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5])
+        elif sys.argv[1] == &apos;-d&apos;:
+            delport(sys.argv[2],sys.argv[3])
+        else:
+            print(&quot;\n Set prot proxy for windows \n&quot;)
+            print(&quot;\n Usage: python %s &lt;cmd&gt; [options] Or -h for help \n&quot; % sys.argv[0])
+</code></pre><p>用法非常简便，有-h帮助，需要的小伙伴可自行下载</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/24/Windows-protproxy/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 

@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://nocv.me">
-  <title>Archives | Nocv blog</title>
+  <title>Windows做端口转发 | Nocv blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Nocv blog">
-<meta property="og:url" content="http://nocv.me/archives/index.html">
+  <meta name="description" content="linux做端口转发相信大家都知道，由于使用了某葵的vpn组网，而多数内网机都是Windows系统，如果我要登录其中一台linux的话还要远程到Windows，还有各种服务等，用起来很不便，于是用Windows端口转发这个想法就出来了。 Step 1:Windows是有端口转发功能的，有些可能不知道，在命令行下一条命令就能完成端口转发  netsh interface portproxy add">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows做端口转发">
+<meta property="og:url" content="http://nocv.me/2017/07/24/Windows-protproxy/index.html">
 <meta property="og:site_name" content="Nocv blog">
+<meta property="og:description" content="linux做端口转发相信大家都知道，由于使用了某葵的vpn组网，而多数内网机都是Windows系统，如果我要登录其中一台linux的话还要远程到Windows，还有各种服务等，用起来很不便，于是用Windows端口转发这个想法就出来了。 Step 1:Windows是有端口转发功能的，有些可能不知道，在命令行下一条命令就能完成端口转发  netsh interface portproxy add">
+<meta property="og:updated_time" content="2018-07-05T01:34:05.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nocv blog">
+<meta name="twitter:title" content="Windows做端口转发">
+<meta name="twitter:description" content="linux做端口转发相信大家都知道，由于使用了某葵的vpn组网，而多数内网机都是Windows系统，如果我要登录其中一台linux的话还要远程到Windows，还有各种服务等，用起来很不便，于是用Windows端口转发这个想法就出来了。 Step 1:Windows是有端口转发功能的，有些可能不知道，在命令行下一条命令就能完成端口转发  netsh interface portproxy add">
   
     <link rel="alternative" href="/atom.xml" title="Nocv blog" type="application/atom+xml">
   
@@ -139,113 +143,239 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Windows-protproxy" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/01/Writeup-md/" class="archive-article-date">
-  	<time datetime="2018-01-01T14:34:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/01/Writeup-md/">网络安全技能大赛官方Writeup</a>
+    <h1 class="article-title" itemprop="name">
+      Windows做端口转发
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/27/bangbang-md/" class="archive-article-date">
-  	<time datetime="2017-12-27T14:34:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/27/bangbang-md/">我是如何发现邦邦微信后台漏洞的</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/24/Windows-protproxy/" class="archive-article-date">
+        
+        <a href="/2017/07/24/Windows-protproxy/" class="archive-article-date">
   	<time datetime="2017-07-24T01:39:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/24/Windows-protproxy/">Windows做端口转发</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>linux做端口转发相信大家都知道，由于使用了某葵的vpn组网，而多数内网机都是Windows系统，如果我要登录其中一台linux的话还要远程到Windows，还有各种服务等，用起来很不便，于是用Windows端口转发这个想法就出来了。</p>
+<h2 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1:"></a>Step 1:</h2><p>Windows是有端口转发功能的，有些可能不知道，在命令行下一条命令就能完成端口转发</p>
+<blockquote>
+<p>netsh interface portproxy add v4tov4 listenaddress=”loadip” listenport=”loadport” connectaddress=”connectip” connectport=”connectport”</p>
+</blockquote>
+<p>这个就是Windows下添加一条端口转发的的命令，其中”loadip”和”loadport”代表本地ip地址和端口<br>“connectip”和”connectport”表示转发目标主机的ip地址和端口<br><br>同样的，删除某一端口转发规则则用下面的命令：</p>
+<blockquote>
+<p>netsh interface portproxy delete v4tov4 listenaddress=”loadip” listenport=”loadport”</p>
+</blockquote>
+<p>显示当前的所以转发规则:</p>
+<blockquote>
+<p>netsh interface portproxy show v4tov4</p>
+</blockquote>
+<h2 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2:"></a>Step 2:</h2><p>前面就是Windows自带的端口转发命令，但是看起来很长用起来很不方便。于是乎，一个Python脚本便诞生了:</p>
+<pre><code>import sys
+import os
 
-        <div class="article-info info-on-right">
-          
-          
+def addport(load_ip,load_port,connect_ip,connect_port):
+    addport = &quot;netsh interface portproxy add v4tov4 listenaddress=&quot;
+    addport += load_ip
+    addport += &quot; listenport=&quot;
+    addport += load_port
+    addport += &quot; connectaddress=&quot;
+    addport += connect_ip
+    addport += &quot; connectport=&quot;
+    addport += connect_port
+    os.system(addport)
 
+def showport():
+    showport = &quot;netsh interface portproxy show v4tov4&quot;
+    os.system(showport)
+
+def delport(load_ip,load_port):
+    delport = &quot;netsh interface portproxy delete v4tov4 listenaddress=&quot;
+    delport += load_ip
+    delport += &quot; listenport=&quot;
+    delport += load_port
+    os.system(delport)
+
+if __name__ == &apos;__main__&apos;:
+    if len(sys.argv) == 1:
+        print(&quot;\n Set prot proxy for windows \n&quot;)
+        print(&quot; Usage: python %s &lt;cmd&gt; [options] Or -h for help \n&quot; % sys.argv[0])
+    if len(sys.argv) == 2:
+        if sys.argv[1] == &apos;-h&apos;:
+            print(&quot;\n -a: add a portproxy \n eg: python file.py -a 192.168.0.1 2333 172.17.24.3 80 \n &quot;)
+            print(&quot; -s: show portproxy for now \n eg: python file.py -s \n&quot;)
+            print(&quot; -d: delete a portproxy \n eg: python file.py -d 192.168.0.1 2333 \n &quot;)
+        elif sys.argv[1] == &apos;-s&apos;:
+            showport()
+        else:
+            print(&quot;\n Set prot proxy for windows \n&quot;)
+            print(&quot;\n Usage: python %s &lt;cmd&gt; [options] Or -h for help \n&quot; % sys.argv[0])
+    if len(sys.argv) &gt; 2:
+        if sys.argv[1] == &apos;-a&apos;:
+            addport(sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5])
+        elif sys.argv[1] == &apos;-d&apos;:
+            delport(sys.argv[2],sys.argv[3])
+        else:
+            print(&quot;\n Set prot proxy for windows \n&quot;)
+            print(&quot;\n Usage: python %s &lt;cmd&gt; [options] Or -h for help \n&quot; % sys.argv[0])
+</code></pre><p>用法非常简便，有-h帮助，需要的小伙伴可自行下载</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://nocv.me/2017/07/24/Windows-protproxy/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/12/27/bangbang-md/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          我是如何发现邦邦微信后台漏洞的
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1"><span class="toc-number">1.</span> <span class="toc-text">Step 1:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-2"><span class="toc-number">2.</span> <span class="toc-text">Step 2:</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -273,8 +403,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
